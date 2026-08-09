@@ -1,0 +1,27 @@
+"use client";
+
+export default function IntroAudio() {
+  const playIntro = () => {
+    const audio = new Audio("/audio/sample_Site.wav");
+
+    audio.volume = 0.15;
+
+    audio.play().catch(console.error);
+
+    setTimeout(() => {
+      audio.pause();
+      audio.currentTime = 0;
+    }, 15000);
+  };
+
+  return (
+    <button
+      onClick={playIntro}
+      className="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-lg border border-[#58a6ff] text-[#58a6ff] bg-black/40 backdrop-blur-sm hover:bg-[#58a6ff] hover:text-black transition"
+    >
+      ♫ Enter O/S
+    </button>
+  );
+}
+
+

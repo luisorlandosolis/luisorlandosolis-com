@@ -1,0 +1,312 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import MeshBackground from "@/components/MeshBackground";
+import Terminal from "@/components/Terminal";
+import IntroAudio from "@/components/IntroAudio";
+
+const NAV_ITEMS = ["Home", "Terminal", "Journey", "Platforms", "Resume", "Contact"];
+
+export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [showTerminal, setShowTerminal] = useState(false);
+  const [flashing, setFlashing] = useState(false);
+  const [indicator, setIndicator] = useState({ top: 0, height: 0 });
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const moveIndicatorTo = (index: number) => {
+    const el = itemRefs.current[index];
+    if (el) setIndicator({ top: el.offsetTop, height: el.offsetHeight });
+  };
+
+  useEffect(() => {
+    moveIndicatorTo(0);
+  }, []);
+
+function handleNavClick(index: number, label: string) {
+  setActiveIndex(index);
+  moveIndicatorTo(index);
+
+  if (label === "Home") {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    setShowTerminal(false);
+  }
+
+  if (label === "Terminal") {
+    setFlashing(true);
+    setShowTerminal(true);
+
+    setTimeout(() => setFlashing(false), 550);
+  }
+
+  if (label === "Journey") {
+    document
+      .getElementById("journey")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setShowTerminal(false);
+  }
+
+  if (label === "Platforms") {
+    document
+      .getElementById("platforms")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setShowTerminal(false);
+  }
+
+  if (label === "Resume") {
+    document
+      .getElementById("portfolio")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setShowTerminal(false);
+  }
+
+  if (label === "Contact") {
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setShowTerminal(false);
+  }
+}
+
+return (
+  <main className="relative min-h-screen bg-[#0d1117] text-white overflow-hidden">
+    <IntroAudio />
+
+    <MeshBackground />
+
+      <div className="relative z-10 min-h-screen flex">
+        <aside className="hidden md:flex w-64 border-r border-gray-800 p-8 flex-col">
+          <div className="font-mono text-3xl text-[#58a6ff] mb-12 tracking-tight">
+            O/S_
+          </div>
+
+          <nav className="relative space-y-6 font-mono">
+<span
+  className={`absolute left-0 w-[2px] bg-[#58a6ff] rounded-full transition-all duration-300 ease-out ${
+    flashing ? "animate-indicator-flash" : ""
+  }`}
+  style={{
+    top: indicator.top,
+    height: indicator.height || 24,
+  }}
+/>
+            {NAV_ITEMS.map((label, index) => (
+              <div
+                key={label}
+                ref={(el) => {
+                  itemRefs.current[index] = el;
+                }}
+                onClick={() => handleNavClick(index, label)}
+                className={`pl-4 cursor-pointer transition-colors duration-200 ${
+                  index === activeIndex
+                    ? "text-[#58a6ff]"
+                    : "text-gray-400 hover:text-[#58a6ff]"
+                }`}
+              >
+                {label}
+              </div>
+            ))}
+</nav>
+
+<div
+  className="absolute top-6 right-8 z-50 cursor-pointer group"
+  onClick={() => {
+    const existing = document.getElementById(
+      "os-intro-audio"
+    ) as HTMLAudioElement | null;
+
+    if (existing) {
+      if (!existing.paused) return;
+      existing.currentTime = 0;
+      existing.play();
+      return;
+    }
+
+    const audio = new Audio("/audio/sample_Site.wav");
+
+    audio.id = "os-intro-audio";
+    audio.volume = 0.15;
+
+    document.body.appendChild(audio);
+
+    audio.play();
+  }}
+>
+  <div className="font-mono text-[10px] uppercase tracking-widest text-gray-500 group-hover:text-[#58a6ff] transition duration-300">
+    ▶ Inspiration
+  </div>
+
+  <div className="font-mono text-[10px] text-gray-600 mt-2 leading-relaxed group-hover:text-gray-400 transition duration-300">
+    Inigo Kennedy
+    <br />
+    Castles In The Air
+  </div>
+</div>
+
+        </aside>
+
+        <section className="flex-1 px-12 py-24">
+          <div className="max-w-4xl">
+            <div className="text-[#58a6ff] uppercase tracking-[0.3em] mb-4">
+              Infrastructure Engineer
+            </div>
+
+            <h1 className="text-7xl font-bold mb-8">
+              Orlando Solis
+            </h1>
+
+            <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
+              Building automation-first platforms across Linux,
+              Windows, Azure, Proxmox, Active Directory,
+              and hybrid cloud environments.
+            </p>
+
+<div className="flex gap-4 mt-10 flex-wrap">
+  <a
+    href="https://github.com/luisorlandosolis"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-lg bg-[#58a6ff] text-black font-medium hover:opacity-90 transition"
+  >
+    GitHub
+  </a>
+
+              <a
+                href="https://www.linkedin.com/in/luis-orlando-solis-8564bbb2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-lg border border-[#58a6ff] text-[#58a6ff] hover:bg-[#58a6ff] hover:text-black transition"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+{showTerminal && (
+  <div className="mt-24">
+    <Terminal />
+  </div>
+)}
+
+<div id="journey" className="mt-32">
+  <h2 className="text-4xl font-bold mb-10 text-[#58a6ff]">
+    Journey
+  </h2>
+
+  <div className="border border-gray-800 rounded-xl p-8 bg-black/20">
+    <div className="space-y-8">
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Phase 1 · Foundation
+        </h3>
+
+        <p className="text-gray-400 mt-2">
+          Built a hybrid infrastructure environment using
+          Active Directory, Hyper-V, Fedora, WireGuard,
+          Azure, and Proxmox.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Phase 2 · Platform Engineering Begins
+        </h3>
+
+        <p className="text-gray-400 mt-2">
+          Expanded into automation, observability,
+          high availability, configuration management,
+          and application delivery.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Phase 3 · DevSecOps Capability
+        </h3>
+
+        <p className="text-gray-400 mt-2">
+          Implemented PKI, mTLS, security automation,
+          Fleet management, centralized administration,
+          and security response workflows.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Phase 4 · SRE Validation
+        </h3>
+
+        <p className="text-gray-400 mt-2">
+          Recovered a multi-node hybrid environment
+          after a real-world outage and transformed
+          those recovery procedures into automation.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Phase 5 · Production Platforms
+        </h3>
+
+        <p className="text-gray-400 mt-2">
+          Application Delivery, Backup & Data Protection,
+          and Security Station Deployment Platforms,
+          including live production deployment validation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{/* Platforms */}
+
+<div id="platforms" className="mt-32">
+  <h2 className="text-4xl font-bold mb-10 text-[#58a6ff]">
+    Platforms
+  </h2>
+
+  <div className="border border-gray-800 rounded-xl p-8 bg-black/20">
+    Platform content coming next.
+  </div>
+</div>
+
+{/* Portfolio */}
+
+<div id="platforms" className="mt-32">
+  <h2 className="text-4xl font-bold mb-10 text-[#58a6ff]">
+    Portfolio
+  </h2>
+
+  <div className="border border-gray-800 rounded-xl p-8 bg-black/20">
+    Portfolio summary coming next.
+  </div>
+</div>
+
+{/* Contact */}
+
+<div id="contact" className="mt-32">
+  <h2 className="text-4xl font-bold mb-10 text-[#58a6ff]">
+    Contact
+  </h2>
+
+  <div className="border border-gray-800 rounded-xl p-8 bg-black/20">
+    Contact console coming next.
+  </div>
+</div>
+
+        </section>
+      </div>
+    </main>
+  );
+}
+
