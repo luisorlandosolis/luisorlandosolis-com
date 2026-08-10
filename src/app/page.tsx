@@ -162,11 +162,10 @@ export default function Home() {
               Infrastructure Engineer
             </div>
 
-            <h1 className="text-7xl font-bold mb-8">
-              Orlando Solis
-            </h1>
-
-            <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
+<h1 className="text-5xl md:text-7xl font-bold mb-8">
+  Orlando Solis
+</h1>
+             <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl">
               Building automation-first platforms across Linux,
               Windows, Azure, Proxmox, Active Directory,
               and hybrid cloud environments.
