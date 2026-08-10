@@ -679,7 +679,7 @@ mindmap
         </div>
 
         <div className="pt-4 border-t border-gray-800 text-gray-400 text-sm">
-          Professional Résumé Available Upon Request
+          Professional CV Available Upon Request
         </div>
 
       </form>
