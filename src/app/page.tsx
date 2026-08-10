@@ -17,6 +17,7 @@ const NAV_ITEMS = [
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeView, setActiveView] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedPlatform, setSelectedPlatform] = useState("");
   const [flashing, setFlashing] = useState(false);
 
@@ -116,11 +117,42 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 min-h-screen flex">
-<div className="md:hidden p-4 border-b border-gray-800">
+<div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-4 border-b border-gray-800 bg-black/95 flex items-center gap-4">
+  <button
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    className="text-[#58a6ff] text-2xl"
+  >
+    ☰
+  </button>
+
   <div className="font-mono text-2xl text-[#58a6ff]">
     O/S_
   </div>
 </div>
+
+{mobileMenuOpen && (
+<div className="md:hidden fixed top-[73px] left-0 w-64 h-screen z-40 bg-black/95 border-r border-gray-800">
+    {[
+      "Home",
+      "Terminal",
+      "Journey",
+      "Platforms",
+      "Portfolio",
+      "Contact",
+    ].map((label, index) => (
+      <div
+        key={label}
+        onClick={() => {
+          handleNavClick(index, label);
+          setMobileMenuOpen(false);
+        }}
+        className="p-4 border-b border-gray-800 text-gray-300 hover:text-[#58a6ff] cursor-pointer"
+      >
+        {label}
+      </div>
+    ))}
+  </div>
+)}
         <aside className="hidden md:flex w-64 border-r border-gray-800 p-8 flex-col">
           <div className="font-mono text-3xl text-[#58a6ff] mb-12 tracking-tight">
             O/S_
@@ -156,7 +188,7 @@ export default function Home() {
           </nav>
         </aside>
 
-        <section className="flex-1 px-12 py-24">
+          <section className="flex-1 px-6 md:px-12 pt-28 md:pt-24 pb-12">
           <div className="max-w-4xl">
             <div className="text-[#58a6ff] uppercase tracking-[0.3em] mb-4">
               Infrastructure Engineer
