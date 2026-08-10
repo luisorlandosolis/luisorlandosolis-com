@@ -311,6 +311,36 @@ export default function Home() {
           Dev-Ops-09 Security Station Deployment Platform
         </div>
       </div>
+      <div className="border border-gray-800 rounded-lg p-4">
+        <div className="text-[#58a6ff] font-mono mb-2">
+          RECOGNITION
+        </div>
+
+        <div className="text-gray-300 italic">
+          "Orlando's team player mind-set, enthusiastic embrace of change,
+          ability to work with minimalistic supervision and unwavering
+          commitment to exceeding expectations set him apart."
+        </div>
+
+        <div className="mt-3">
+          <div className="font-semibold">Hiroko Yamamura</div>
+          <div className="text-gray-400">
+            Executive Director of IT, School of the Art Institute of Chicago
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 my-4"></div>
+
+        <div className="text-gray-300 italic">
+          "Orlando has been a key contributor in helping SAIC coordinate and
+          integrate technology throughout the last 10 years. His commitment
+          and camaraderie have been invaluable."
+        </div>
+
+        <div className="mt-3">
+          <div className="font-semibold">Ursula Sokolowska</div>
+        </div>
+      </div>
 
     </div>
   </div>
