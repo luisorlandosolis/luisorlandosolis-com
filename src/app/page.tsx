@@ -306,7 +306,7 @@ export default function Home() {
         <div className="text-gray-400 mt-2">
           Dev-Ops-07 Application Delivery Platform
           <br />
-          Dev-Ops-08 Backup & Data Protection Platform
+          Dev-Ops-08 Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform
           <br />
           Dev-Ops-09 Security Station Deployment Platform
         </div>
@@ -455,13 +455,21 @@ export default function Home() {
         </div>
         <div>Application Delivery Platform</div>
       </div>
-
-      <div className="border border-gray-800 rounded-lg p-4">
-        <div className="text-[#58a6ff] font-mono mb-2">
-          DEV-OPS-08
-        </div>
-        <div>Backup & Data Protection Platform</div>
-      </div>
+<a
+  href="https://github.com/luisorlandosolis/dev-ops-08-multi-os-hybrid-data-resilience-preventive-disaster-recovery-platform"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="border border-gray-800 rounded-lg p-4 hover:border-[#58a6ff] transition duration-200">
+    <div className="text-[#58a6ff] font-mono mb-2">
+      DEV-OPS-08
+    </div>
+    <div>
+      Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform
+    </div>
+  </div>
+</a>
 
 <div
   onClick={() => setSelectedPlatform("09")}
@@ -576,7 +584,7 @@ mindmap
   <div className="text-gray-400">
     Dev-Ops-07 Application Delivery Platform
     <br />
-    Dev-Ops-08 Backup & Data Protection Platform
+    Dev-Ops-08 Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform
     <br />
     Dev-Ops-09 Security Station Deployment Platform
   </div>
