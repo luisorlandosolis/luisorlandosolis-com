@@ -582,11 +582,13 @@ mindmap
   </div>
 
   <div className="text-gray-400">
-    Dev-Ops-07 Application Delivery Platform
+    Platform Engineering
     <br />
-    Dev-Ops-08 Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform
+    Infrastructure Automation
     <br />
-    Dev-Ops-09 Security Station Deployment Platform
+    Site Reliability Engineering
+    <br />
+    Operational Resilience
   </div>
 </div>
 <div>
