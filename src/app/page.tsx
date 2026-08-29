@@ -471,26 +471,26 @@ export default function Home() {
   </div>
 </a>
 
-<div
-  onClick={() => setSelectedPlatform("09")}
-  className={`rounded-lg p-4 transition duration-200 cursor-pointer ${
-    selectedPlatform === "09"
-      ? "border border-[#58a6ff] bg-[#58a6ff]/10"
-      : "border border-gray-800 hover:border-[#58a6ff] hover:bg-[#58a6ff]/5"
-  }`}
+<a
+  href="https://github.com/luisorlandosolis/dev-ops-09-security-station-deployment-operations-platform"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
 >
-        <div className="text-[#58a6ff] font-mono mb-2">
-          DEV-OPS-09
-        </div>
+  <div className="border border-gray-800 rounded-lg p-4 hover:border-[#58a6ff] transition duration-200">
+    <div className="text-[#58a6ff] font-mono mb-2">
+      DEV-OPS-09
+    </div>
 
-        <div className="font-semibold">
-          Security Station Deployment Platform
-        </div>
+    <div className="font-semibold">
+      Security Station Deployment Platform
+    </div>
 
-        <div className="text-sm text-gray-500 mt-2">
-          Live Production Environment
-        </div>
-      </div>
+    <div className="text-sm text-gray-500 mt-2">
+      Live Production Environment
+    </div>
+  </div>
+</a>
 
     </div>
   </div>
