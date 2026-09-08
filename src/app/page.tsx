@@ -532,6 +532,7 @@ mindmap
       Proxmox
       Windows Server
       Linux
+      Hybrid Infrastructure
 
     Automation
       Ansible
@@ -540,6 +541,8 @@ mindmap
       Python
       Bash
       WinRM
+      Infrastructure Automation
+      Operational Automation
 
     Security
       WireGuard
@@ -547,31 +550,90 @@ mindmap
       mTLS
       Zero Trust
       Ansible Vault
+      RBAC
+      Service Accounts
+      Authentication
+      Authorization
+
+    Platform Engineering
+      Kubernetes
+      Control Plane
+      Worker Nodes
+      Ingress
+      SMB CSI
+      Persistent Volumes
+      PVC
+      Container Runtime
+      Dynamic Workloads
+      Jenkins on Kubernetes
+      HTTPS Services
+
+    CI/CD
+      Jenkins
+      Static Agents
+      Dynamic Kubernetes Agents
+      Groovy
+      Jenkinsfiles
+      Pipeline Automation
+      Continuous Delivery
+
+    Recovery Engineering
+      Clonezilla
+      Backup Automation
+      RAID Replication
+      Disaster Recovery
+      Recovery Validation
+      Hybrid Recovery
+      Operational Resilience
+      Infrastructure Recovery
 
     Observability
       Grafana
       Prometheus
       PostgreSQL
       FinOps
-
-    Recovery
-      Clonezilla
-      Backup Automation
-      RAID Replication
-      Disaster Recovery
-      Recovery Validation
+      Cost Analytics
+      Monitoring
+      Alerting
 
     Endpoint Management
       Fleet OSS
       Orbit
       osquery
       Multi-OS Management
+      Asset Visibility
 
-    Platforms
-      Software Distribution
-      Data Resilience
-      Security Station
+    Application Platforms
+      Solis Weather Platform
+        NGINX Load Balancer
+        Weather Node A
+        Weather Node B
+        Azure DR Node
+        WireGuard Mesh
 
+      Azure FinOps Platform
+        Azure Cost Data
+        Grafana Dashboards
+        Cost Analytics
+        Cost Visibility
+
+    Delivery Platforms
+      GitHub
+      GitHub Actions
+      GitOps
+      Artifact Management
+      Planned
+        ArgoCD
+
+    Production Platforms
+      Secure Remote Operations Platform
+      Multi-OS Automation Platform
+      Application Delivery Platform
+      Multi-OS Hybrid Data Resilience Platform
+      Security Station Deployment Platform
+
+    Community
+      Jamf Nation
 `}
 />
 </div>
