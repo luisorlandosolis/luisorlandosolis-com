@@ -492,6 +492,48 @@ export default function Home() {
   </div>
 </a>
 
+<a
+  href="https://github.com/luisorlandosolis/dev-ops-10-kubernetes-platform-engineering-operations-platform"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="border border-gray-800 rounded-lg p-4 hover:border-[#58a6ff] transition duration-200">
+    <div className="text-[#58a6ff] font-mono mb-2">
+      DEV-OPS-10
+    </div>
+
+    <div className="font-semibold">
+      Kubernetes Platform Engineering & Operations Platform
+    </div>
+
+    <div className="text-sm text-gray-500 mt-2">
+      Kubernetes • Jenkins • Dynamic Agents
+    </div>
+  </div>
+</a>
+
+<a
+  href="https://github.com/luisorlandosolis/dev-ops-10-5-ci-cd-platform"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="border border-gray-800 rounded-lg p-4 hover:border-[#58a6ff] transition duration-200">
+    <div className="text-[#58a6ff] font-mono mb-2">
+      DEV-OPS-10.5
+    </div>
+
+    <div className="font-semibold">
+      CI/CD Platform
+    </div>
+
+    <div className="text-sm text-gray-500 mt-2">
+      Jenkins • Pipelines • GitHub • Continuous Delivery
+    </div>
+  </div>
+</a>
+
     </div>
   </div>
 )}
