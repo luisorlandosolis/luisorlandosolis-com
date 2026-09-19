@@ -534,6 +534,26 @@ export default function Home() {
   </div>
 </a>
 
+<a
+  href="https://github.com/luisorlandosolis/dev-ops-11-source-control-modernized-delivery-automation-platform"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="border border-gray-800 rounded-lg p-4 hover:border-[#58a6ff] transition duration-200">
+    <div className="text-[#58a6ff] font-mono mb-2">
+      DEV-OPS-11
+    </div>
+
+    <div className="font-semibold">
+      Source Control & Modernized Delivery Automation Platform
+    </div>
+
+    <div className="text-sm text-gray-500 mt-2">
+      Git • GitHub • GitHub Actions • Delivery Automation
+    </div>
+  </div>
+</a>
     </div>
   </div>
 )}
