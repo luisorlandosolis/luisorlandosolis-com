@@ -554,6 +554,27 @@ export default function Home() {
     </div>
   </div>
 </a>
+
+<a
+  href="https://github.com/luisorlandosolis/dev-ops-12-gitops-configuration-management-platform-public"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="border border-gray-800 rounded-lg p-4 hover:border-[#58a6ff] transition duration-200">
+    <div className="text-[#58a6ff] font-mono mb-2">
+      DEV-OPS-12
+    </div>
+
+    <div className="font-semibold">
+      GitOps & Configuration Management Platform
+    </div>
+
+    <div className="text-sm text-gray-500 mt-2">
+      ArgoCD • GitOps • Kubernetes • RBAC • PKI • Network Governance
+    </div>
+  </div>
+</a>
     </div>
   </div>
 )}
